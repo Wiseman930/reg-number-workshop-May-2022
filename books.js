@@ -3,11 +3,26 @@ const bookTemplateElem = document.querySelector(".bookTemplate");
 const messageTS = document.querySelector(".messageTS");
 const messageHBS = document.querySelector(".messageHBS");
 
-let message = `Dear ${firstName},
+const firstName = "Wiseman";
+const bookCount = 3;
+const dayCount = 5;
 
-The ${bookCount} books you took out at the library is due in ${dayCount} days.
+let message = `Dear <strong> ${firstName}</strong>,
+<br></br>
+The <strong>${bookCount} books </strong> you took out at the library is due in <strong>${dayCount} days </strong> .
+<br></br>
+Please return these books to us in the next <strong> ${dayCount} days </strong>.`
+messageTS.innerHTML = message;
 
-Please return these books to us in the next ${dayCount} days.
 
-`
+messageHBS.innerHTML = template({
+    firstName: 'Lindani',
+    bookCount: 3,
+    dayCount: 5,
+    books
+  
 
+
+
+
+})
