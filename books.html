@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
 	<title>Document</title>
 	<style>
 		body {
@@ -11,24 +11,24 @@
 		}
 	</style>
 
-	<script type="language/template-x" class="bookTemplate" >
-		Dear {{firstname}},
-		<br></br>
-		The {{bookCount}} books you at the library is due in {{dayCount}}
-		<br></br>
+	<script language ="text/template-x" class="bookTemplate" >
+		Dear {{firstName}},
+		<br>
+		<br>
+		The {{bookCount}} books you at the library is due in {{dayCount}} days
+		<br>
+		<br>
 		please retun these books to us in the next {{dayCount}} days.
-		<hr>
 
-		{{#if books}}
+		<hr>
 		The books you need to return are:
 		<ul>
 		{{#each books}}
 		<li>{{title}} written by {{author}}</li>
+		<br><br>
 		{{/each}}
 		</ul>
-		{{else}}
-		Book names unkown.
-		{{/if}}
+
 
 	</script>
 
@@ -41,7 +41,7 @@
 	</div>
 
 	<div>
-		Using handlebars
+		<h2>Using handlebars</h2>
 		<div class="messageHBS" ></div>
 	</div>
 
